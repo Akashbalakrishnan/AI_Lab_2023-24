@@ -1,6 +1,5 @@
-# Ex.No: 4   Implementation of Alpha Beta Pruning 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No: 4   Implementation of Alpha Beta Pruning                                                                 
+### REGISTER NUMBER : 212222040004
 ### AIM: 
 Write a Alpha beta pruning algorithm to find the optimal value of MAX Player from the given graph.
 ### Steps:
@@ -15,19 +14,38 @@ Write a Alpha beta pruning algorithm to find the optimal value of MAX Player fro
 9.  Stop the program. 
 
 ### Program:
+```
+graph={
+    '5':['3','7'],
+    '3':['2','4'],
+    '7':['8'],
+    '2':[],
+    '4':['8'],
+    '8':[]
+}
+visited = [] 
+queue = []
+def bfs(visited, graph, node): 
+        visited.append(node)
+        queue.append(node)
+        while queue:
+            m = queue.pop(0)
+            print(m)
+            for neighbour in graph[m]:
+                    if neighbour not in visited:
+                         visited.append(neighbour)
+                         queue.append(neighbour)
+                                           
+#Driver code
+print("Following is the Breadth First Search")
+bfs(visited, graph, '5')
 
-
-
-
-
-
-
-
-
+```
 
 
 ### Output:
 
+![image](https://github.com/user-attachments/assets/a33e3c17-b6d3-4e54-868d-5fe412d82efe)
 
 
 ### Result:
