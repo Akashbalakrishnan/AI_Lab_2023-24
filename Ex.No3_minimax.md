@@ -1,6 +1,5 @@
-# Ex.No: 3  Implementation of Minimax Search
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No: 3  Implementation of Minimax Search                                                            
+### REGISTER NUMBER : 212222040004
 ### AIM: 
 Write a mini-max search algorithm to find the optimal value of MAX Player from the given graph.
 ### Algorithm:
@@ -16,7 +15,32 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 
 ### Program:
 
-
+```
+graph={
+    '5':['3','7'],
+    '3':['2','4'],
+    '7':['8'],
+    '2':[],
+    '4':['8'],
+    '8':[]
+}
+visited = [] 
+queue = []
+def bfs(visited, graph, node): 
+        visited.append(node)
+        queue.append(node)
+        while queue:
+            m = queue.pop(0)
+            print(m)
+            for neighbour in graph[m]:
+                    if neighbour not in visited:
+                         visited.append(neighbour)
+                         queue.append(neighbour)
+                                           
+#Driver code
+print("Following is the Breadth First Search")
+bfs(visited, graph, '5')
+```
 
 
 
@@ -28,6 +52,7 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 
 ### Output:
 
+![image](https://github.com/user-attachments/assets/a482cc17-bacc-4ed5-a08b-1256af562ab3)
 
 
 ### Result:
